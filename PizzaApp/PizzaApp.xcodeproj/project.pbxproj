@@ -14,6 +14,12 @@
 		7AF59F5B2BF8C6EC0048DAEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF59F532BF8C6EC0048DAEA /* Preview Assets.xcassets */; };
 		7AF59F5C2BF8C6EC0048DAEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF59F552BF8C6EC0048DAEA /* Assets.xcassets */; };
 		7AF59F5D2BF8C6EC0048DAEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F572BF8C6EC0048DAEA /* ContentView.swift */; };
+		7AF59F5F2BF8C88F0048DAEA /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F5E2BF8C88F0048DAEA /* OrderView.swift */; };
+		7AF59F612BF8C89F0048DAEA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F602BF8C89F0048DAEA /* MenuView.swift */; };
+		7AF59F632BF8C8DB0048DAEA /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F622BF8C8DB0048DAEA /* MenuItemView.swift */; };
+		7AF59F652BF8C9040048DAEA /* MenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F642BF8C9040048DAEA /* MenuRowView.swift */; };
+		7AF59F672BF8C94F0048DAEA /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F662BF8C94F0048DAEA /* OrderRowView.swift */; };
+		7AF59F692BF8C95E0048DAEA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F682BF8C95E0048DAEA /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		7AF59F532BF8C6EC0048DAEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7AF59F552BF8C6EC0048DAEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AF59F572BF8C6EC0048DAEA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7AF59F5E2BF8C88F0048DAEA /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		7AF59F602BF8C89F0048DAEA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		7AF59F622BF8C8DB0048DAEA /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		7AF59F642BF8C9040048DAEA /* MenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowView.swift; sourceTree = "<group>"; };
+		7AF59F662BF8C94F0048DAEA /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
+		7AF59F682BF8C95E0048DAEA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +156,12 @@
 			isa = PBXGroup;
 			children = (
 				7AF59F572BF8C6EC0048DAEA /* ContentView.swift */,
+				7AF59F5E2BF8C88F0048DAEA /* OrderView.swift */,
+				7AF59F602BF8C89F0048DAEA /* MenuView.swift */,
+				7AF59F622BF8C8DB0048DAEA /* MenuItemView.swift */,
+				7AF59F642BF8C9040048DAEA /* MenuRowView.swift */,
+				7AF59F662BF8C94F0048DAEA /* OrderRowView.swift */,
+				7AF59F682BF8C95E0048DAEA /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,8 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF59F5F2BF8C88F0048DAEA /* OrderView.swift in Sources */,
+				7AF59F612BF8C89F0048DAEA /* MenuView.swift in Sources */,
 				7AF59F5D2BF8C6EC0048DAEA /* ContentView.swift in Sources */,
 				7AF59F5A2BF8C6EC0048DAEA /* PizzaAppApp.swift in Sources */,
+				7AF59F652BF8C9040048DAEA /* MenuRowView.swift in Sources */,
+				7AF59F672BF8C94F0048DAEA /* OrderRowView.swift in Sources */,
+				7AF59F632BF8C8DB0048DAEA /* MenuItemView.swift in Sources */,
+				7AF59F692BF8C95E0048DAEA /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +477,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PizzaApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PizzaApp/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -481,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PizzaApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PizzaApp/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
