@@ -48,7 +48,7 @@ SwiftUI
         - For buttons
         - 2 Variations : 
             - 1. Text + Image assets / sf symbol - Label(“Cart”, systemImage: “cart”)
-            - 2. Closures of Text & icon - Label { Text(“cart” } icon: { Image( … ) 
+            - 2. Closures of Text & icon - Label { Text(“cart” } icon: { Image( … ) }
 
     - Add Views
         1. SwiftUI template File -> New -> SwiftUI
@@ -59,7 +59,8 @@ SwiftUI
         1. By right click & select the option 
         2. Simply copy paste to the relevant View
 
-    - Subviews with parameters
+   - Subviews with parameters
+        - Add var while extracting subview to get real-time data and pass it while calling the view and also in previews
 
 
 Referances: 
