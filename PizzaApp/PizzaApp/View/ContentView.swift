@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    var orders:[Int] = [1,2,3,4,6]
+    
+    var orders: [Int] = [1,2,3,4,5]
+    
     var body: some View {
         VStack {
             HeaderView()
@@ -19,6 +21,7 @@ struct ContentView: View {
         }
         .padding()
     }
+    
 }
 
 #Preview {

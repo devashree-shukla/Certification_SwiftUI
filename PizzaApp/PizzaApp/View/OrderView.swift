@@ -25,7 +25,7 @@ struct OrderView: View {
                 Spacer()
             }
             ScrollView {
-                ForEach(orders, id:\.self){ order in
+                ForEach(orders, id:\.self) { order in
                     OrderRowView(order: order)
                 }
             }
