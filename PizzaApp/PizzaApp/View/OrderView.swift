@@ -27,9 +27,15 @@ struct OrderView: View {
             ScrollView {
                 ForEach(orders, id:\.self) { order in
                     OrderRowView(order: order)
+                        //.padding(5)
+                        .padding(.bottom, 5)
+                        .padding([.leading, .trailing], 5)
                 }
             }
         }
+        .padding()
+        .background(Color("Sky"))
+//        .padding()
     }
 }
 

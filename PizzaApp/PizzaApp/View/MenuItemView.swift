@@ -12,11 +12,25 @@ struct MenuItemView: View {
         VStack {
             if let image = UIImage(named: "0_lg"){
                 Image(uiImage: image)
+//                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .cornerRadius(10)
             } else {
                 Image("surfboard_lg")
             }
-            Text("Margherita")
-            Text("Description")
+            VStack(alignment: .leading) {
+                Text("Margherita")
+                    .font(.title)
+//                    .bold()
+                    .fontWeight(.semibold)
+//                    .foregroundColor(Color(red: 0.38, green: 0.28, blue: 0.67))
+                    .foregroundColor(Color("Sky"))
+                    .padding(.leading)
+                    .background(.linearGradient(colors: [Color("Surf"), Color("Sky").opacity(0.1)], startPoint: .leading, endPoint: .bottom), in: Capsule())
+                ScrollView {
+                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel convallis ex. Aliquam malesuada dapibus purus nec tempor. Cras aliquam fringilla congue. Aliquam leo odio, malesuada eget scelerisque id, gravida a magna. Aliquam a tincidunt metus, et cursus diam. Maecenas eget vulputate purus. Duis ut mauris ultrices, hendrerit orci et.")
+                        .font(.body)
+                }
+            }
         }
     }
 }
