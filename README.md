@@ -14,6 +14,7 @@ SwiftUI
 - In previews 
     - Live view to edit from code
     - Selection View to edit from the preview
+    
 - Chapter 2 : Views
     - StackView : 
         - HStack
@@ -62,6 +63,51 @@ SwiftUI
    - Subviews with parameters
         - Add var while extracting subview to get real-time data and pass it while calling the view and also in previews
 
+- Chapter 3 :
+    - Presenting Views :
+        - SwiftUI views reacting to any var changes
+
+    - Space modifiers :
+        1. Padding: Widely used, be sure while using it else might give unpredictable results, 
+            - .padding(5)
+            - .padding(.bottom, 5)
+            - .padding([.leading, .trailing], 5)
+            - -ve padding possible, mostly used with shape modifier .padding(.trailing, -20)
+
+        2. Shape : 
+            - clipShape()
+            - Circle()
+            - Rounded Rectangle()
+
+        3. Text: Typography
+            - .font(…)
+            - embed within containers/stack for large content
+            - fontWeight(…) 
+            - .bold()
+            - .font(custom: “<font name>”, fixedSize: 18)
+            - .font(custom: “<font name>”, size: 18, relativeTo: .body ) -> for suporting dynamic font
+
+        4. Color : Forground
+            - forgroundColor(<system color>) —> .foregroundColor(.white)
+            - forgroundColor(<custom color>) —> .foregroundColor(Color(red: 0.38, green: 0.28, blue: 0.67))
+            - using Color assets set —> .foregroundColor(Color(“<color asset name>”))
+
+        5. Background : 
+            - Sequence matters when used with padding() modifier
+            - .backgroundColor(…)
+            - can use gradient as parameter
+                1. Angular
+                2. Circular
+                3. Linear
+                .background(.linearGradient(colors: [.cyan, Color("Sky"), Color("Surf"), .white], startPoint: .topLeading, endPoint: .bottom))
+            - Many ways to put shape or colors as background
+
+        6. Material & Shadows :
+            - Needed to handle different color schemes - light / dark
+            - .background(<material style> …)
+            - foregroundStyle(
+            -  .shadow(radius: 5)
+            -  .shadow(color: .teal, radius: 15, x: 8, y: 8)
 
 Referances: 
 

@@ -17,7 +17,9 @@ struct HeaderView: View {
             Text("Huli Pizza Company")
                 .font(.custom("Georgia", size: 30, relativeTo: .title))
 //                .foregroundColor(.white)
-                .foregroundColor(Color("Surf"))
+//                .foregroundColor(Color("Surf"))
+                .foregroundStyle(.regularMaterial)
+                .fontWeight(.medium)
             
         }
     }

@@ -14,6 +14,7 @@ struct MenuItemView: View {
                 Image(uiImage: image)
 //                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     .cornerRadius(10)
+                    .shadow(color: .teal, radius: 15, x: 8, y: 8)
             } else {
                 Image("surfboard_lg")
             }
@@ -23,7 +24,8 @@ struct MenuItemView: View {
 //                    .bold()
                     .fontWeight(.semibold)
 //                    .foregroundColor(Color(red: 0.38, green: 0.28, blue: 0.67))
-                    .foregroundColor(Color("Sky"))
+//                    .foregroundColor(Color("Sky"))
+                    .foregroundStyle(.thickMaterial)
                     .padding(.leading)
                     .background(.linearGradient(colors: [Color("Surf"), Color("Sky").opacity(0.1)], startPoint: .leading, endPoint: .bottom), in: Capsule())
                 ScrollView {

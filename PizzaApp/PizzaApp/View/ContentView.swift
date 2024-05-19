@@ -14,12 +14,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HeaderView()
+                .shadow(radius: 5)
             if showOrders {
                 OrderView(orders: orders)
             } else {
                 MenuItemView()
                     .padding(5)
-                    .background(.white, in: RoundedRectangle(cornerRadius: 10))
+                    .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 10))
                 MenuView()
             }
             Spacer()
