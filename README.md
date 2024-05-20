@@ -109,6 +109,40 @@ SwiftUI
             -  .shadow(radius: 5)
             -  .shadow(color: .teal, radius: 15, x: 8, y: 8)
 
+        7. Scale :
+            - to scale views
+            - .resizable() - Needs to be called first than below scale modifiers, put directly after Image( … )
+            - .scaleToFill(), .ignoreSAfeArea(), .scaleToFit()
+            - Makes simpler to redeisgn as per devices
+
+        8. Size :
+            - similar to frame method of UI KIt
+            - .frame(width: 300)
+            - .frame(width: 300, height: 150)
+            - .frame(minWidth: 150, maxWidth: 1000, maxHeight: 200)
+            - .rotationEffect(.zero)
+
+    - SOME MODIFIERS TO NOT WORK TOGETHER, SO ALWAYS NEED TO RELOOK & CLEAN UP THE CODE.
+    
+- Chapter 4 :
+    - MVC v/s MVVM : 
+        - Everything is struct here so value type. So passing values can be done in many ways 
+        - In view heirarchy, to pass value in downword views can be easily done using var
+        - To pass value in up word direction on changes of var, is tricky. Need to use wrappers.
+            1. @State 
+                - tracks changes in variables, 
+                - triggers redraw of view, 
+                - local to the struct so good practice to use private, 
+                - can pass value from superview to subview
+                - buttons are only one way to change states
+            2. @Binding - similar to @State but passes value from subview to superview as well, two way, uses $.
+            3. @ObservedObject - tracks changes in model & updates the view if any change occurs in model
+    
+    
+    
+    
+    
+    
 Referances: 
 
 - https://www.linkedin.com/learning/swiftui-essential-training-18764703/challenge-ratings-view?autoSkip=true&contextUrn=urn%3Ali%3AlearningCollection%3A7196859367734857728&resume=false

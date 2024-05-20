@@ -10,11 +10,18 @@ import SwiftUI
 struct ContentView: View {
     
     var orders: [Int] = [1,2,3,4,5]
-    var showOrders = true
+    @State private var showOrders = true
     var body: some View {
         VStack {
             HeaderView()
                 .shadow(radius: 5)
+            Button {
+                showOrders.toggle()
+            } label: {
+                Image(systemName: showOrders ? "cart" : "menucard")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            }
+            .foregroundStyle(.white)
             if showOrders {
                 OrderView(orders: orders)
             } else {

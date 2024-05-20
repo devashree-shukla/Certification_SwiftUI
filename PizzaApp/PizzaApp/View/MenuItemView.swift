@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MenuItemView: View {
+    
+    @State private var addedItem: Bool = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -37,8 +40,24 @@ struct MenuItemView: View {
                 ScrollView {
                     Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel convallis ex. Aliquam malesuada dapibus purus nec tempor. Cras aliquam fringilla congue. Aliquam leo odio, malesuada eget scelerisque id, gravida a magna. Aliquam a tincidunt metus, et cursus diam. Maecenas eget vulputate purus. Duis ut mauris ultrices, hendrerit orci et.")
                         .font(.body)
+                    
+                    
                 }
             }
+            Button {
+                addedItem.toggle()
+            } label: {
+                HStack {
+                    Spacer()
+                    Text(12.99, format: .currency(code: "USD")).bold()
+                    Image(systemName: addedItem ? "cart.fill.badge.plus" : "cart.badge.plus")
+                    Spacer()
+                }
+            }
+            .foregroundColor(.white)
+            .background(Color(.red), in: Capsule())
+            .padding(5)
+            .shadow(radius: 10)
         }
     }
 }
