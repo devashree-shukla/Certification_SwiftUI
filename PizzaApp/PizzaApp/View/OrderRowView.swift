@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OrderRowView: View {
     
-    var order: Int
+    var order: OrderItem
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -30,6 +30,6 @@ struct OrderRowView: View {
     
 }
 
-#Preview {
-    OrderRowView(order: 1)
-}
+//#Preview {
+//    OrderRowView(order: .constant(testOrderItem))
+//}

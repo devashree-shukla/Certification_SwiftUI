@@ -9,46 +9,54 @@ import SwiftUI
 
 struct OrderView: View {
     
-    var orders: [Int]
+    @Binding var orders: [OrderItem]
     
     var body: some View {
-        ZStack(alignment: .top) {
+        VStack {
+            ZStack(alignment: .top) {
+                
+                ScrollView {
+                    ForEach(orders, id:\.id) { order in
+                        Text(order.item.name)
+                        //                    OrderRowView(order: order)
+                            .padding(5)
+                            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 10))
+                            .padding(.bottom, 5)
+                            .padding([.leading, .trailing], 5)
+                    }
+                }
+                .padding([.top], 80)
+                
+                HStack {
+                    Text("Order Pizza")
+                        .font(.title)
+                        .frame(height: 70)
+                    Spacer()
+                    Label {
+                        Text(59.99,format: .currency(code: "USD"))
+                    }
+                icon: {
+                    Image(systemName: orders.isEmpty ? "cart" : "cart.circle.fill")
+                }
+                }
+                .background(.ultraThinMaterial)
+                .background(.green)
+                .padding(5)
+            }
+            .padding()
+            .background(Color("Sky"))
+            .cornerRadius(10)
             
-            ScrollView {
-                ForEach(orders, id:\.self) { order in
-                    OrderRowView(order: order)
-                        //.padding(5)
-                        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 10))
-                        .padding(.bottom, 5)
-                        .padding([.leading, .trailing], 5)
+            Button("Delete order") {
+                if !orders.isEmpty { orders.removeLast()
                 }
             }
-            .padding([.top], 80)
-            
-            HStack {
-                Text("Order Pizza")
-                    .font(.title)
-                    .frame(height: 70)
-                Spacer()
-                Label {
-                    Text(59.99,format: .currency(code: "USD"))
-                }
-            icon: {
-                Image(systemName: orders.isEmpty ? "cart" : "cart.circle.fill")
-            }
-            }
-            .background(.ultraThinMaterial)
-            .background(.green)
+             .background(.regularMaterial, in: Capsule())
             .padding(5)
         }
-        .padding()
-        .background(Color("Sky"))
-        .cornerRadius(10)
-//        .padding()
-        
-    }
+        .background(Color("Surf"))    }
 }
 
 #Preview {
-    OrderView(orders: [1,2,3])
+    OrderView(orders: .constant(testOrders))
 }
