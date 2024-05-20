@@ -16,9 +16,8 @@ struct OrderView: View {
             ZStack(alignment: .top) {
                 
                 ScrollView {
-                    ForEach(orders, id:\.id) { order in
-                        Text(order.item.name)
-                        //                    OrderRowView(order: order)
+                    ForEach($orders, id:\.id) { order in
+                        OrderRowView(order: order)
                             .padding(5)
                             .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 10))
                             .padding(.bottom, 5)

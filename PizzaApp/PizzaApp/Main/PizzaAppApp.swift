@@ -11,7 +11,7 @@ import SwiftUI
 struct PizzaAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(menu: MenuModel().menu)
         }
     }
 }

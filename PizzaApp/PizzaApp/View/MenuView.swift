@@ -9,10 +9,20 @@ import SwiftUI
 
 struct MenuView: View {
   
+    var menu: [MenuItem]
+    @Binding var selectedItem: MenuItem
+    
     var body: some View {
-        ScrollView {
-            ForEach(1...25,id:\.self) { item in
-                MenuRowView(item: item)
+        List(MenuCategory.allCases, id:\.self) { category in
+            Section {
+                ForEach(menu.filter { $0.category == category }) { item in
+                    MenuRowView(item: item)
+                        .onTapGesture {
+                            selectedItem = item
+                        }
+                }
+            } header: {
+                Text(category.rawValue)
             }
         }
     }
@@ -20,5 +30,5 @@ struct MenuView: View {
 }
 
 #Preview {
-    MenuView()
+    MenuView(menu: MenuModel().menu, selectedItem: .constant(testMenuItem))
 }

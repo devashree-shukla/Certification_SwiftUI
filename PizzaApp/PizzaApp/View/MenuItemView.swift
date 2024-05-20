@@ -10,16 +10,17 @@ import SwiftUI
 struct MenuItemView: View {
     
     @State private var addedItem: Bool = false
+    @Binding var item: MenuItem
     
     var body: some View {
         VStack {
             HStack {
-                Text("Margherita Huli's Piza")
+                Text(item.name)
                     .font(.title)
                     .fontWeight(.semibold)
                     .foregroundStyle(.black)
                     .padding(.leading)
-                if let image = UIImage(named: "0x_lg"){
+                if let image = UIImage(named: "\(item.id)_lg"){
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
@@ -38,7 +39,7 @@ struct MenuItemView: View {
             
             VStack(alignment: .leading) {
                 ScrollView {
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel convallis ex. Aliquam malesuada dapibus purus nec tempor. Cras aliquam fringilla congue. Aliquam leo odio, malesuada eget scelerisque id, gravida a magna. Aliquam a tincidunt metus, et cursus diam. Maecenas eget vulputate purus. Duis ut mauris ultrices, hendrerit orci et.")
+                    Text(item.description)
                         .font(.body)
                     
                     
@@ -63,5 +64,5 @@ struct MenuItemView: View {
 }
 
 #Preview {
-    MenuItemView()
+    MenuItemView(item: .constant(testMenuItem))
 }

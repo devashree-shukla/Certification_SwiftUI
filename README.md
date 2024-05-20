@@ -135,10 +135,22 @@ SwiftUI
                 - local to the struct so good practice to use private, 
                 - can pass value from superview to subview
                 - buttons are only one way to change states
-            2. @Binding - similar to @State but passes value from subview to superview as well, two way, uses $.
+            2. @Binding - similar to @State but passes value from subview to superview as well, two way, uses $ while getting value from subview to update.
             3. @ObservedObject - tracks changes in model & updates the view if any change occurs in model
     
+    - Identifiable :
+        - to identify items in models or array
+        - specifies unique identity value
+        - Modtly Int or UInt type
+        - If a model var is Identifiable than directly can be used in ForEach loop without mentioning id parameter
+        - $ goes always to higher level when Binding var is used in ForEach loop
     
+    - List : 
+        - Alternative of ForEach loops with Scrollview
+        - Widely needed
+        - Adds some seprators, sections with rows inside, UI enhancements & some more features than above way
+        
+        @BINDING IS A LINK, @STATE IS WHERE WE START I.E CONTENTVIEW OR ROOT VIEW OF PROJECT
     
     
     
