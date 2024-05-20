@@ -144,6 +144,7 @@ SwiftUI
         - Modtly Int or UInt type
         - If a model var is Identifiable than directly can be used in ForEach loop without mentioning id parameter
         - $ goes always to higher level when Binding var is used in ForEach loop
+        - id is the required property here (default: \.self or to use \.id or can rmeove it if Identifiable is extended))
     
     - List : 
         - Alternative of ForEach loops with Scrollview
@@ -151,6 +152,45 @@ SwiftUI
         - Adds some seprators, sections with rows inside, UI enhancements & some more features than above way
         
         @BINDING IS A LINK, @STATE IS WHERE WE START I.E CONTENTVIEW OR ROOT VIEW OF PROJECT
+        @BINDING TRANSFERS VALUE UP AND DONW THE HEIRARCHY , @STATE SINGLE SOURCE OF TRUTH
+        
+- Chapter 5 :
+    - Observable objects in Models
+        - This is needed to avoid overhead happens with @State / @Binding as not all data changes triggers view updates to redraw
+        
+        - ObservableObject protocol
+            - Adopt ObservableObject protocol in model class that used for model
+            - Uses class here to model to work efficiently 
+        
+        - @Published
+            - Mention any at least one var with @Published wrapper to notify about any changes & redraw
+            - Can have one or many @Published vars
+            - Allows to track some model property but not all
+        
+        - @StateObject
+            - single source of truth
+            - starts view heirachy
+        
+        - @ObservedObject
+            - similato binding
+                
+        - @EnvironmentObject
+            - can show up anywhere in view or subview
+            - will use @StateObject to find their initial value
+            - need to put the environment object to preview
+            - declare @StateObject in main view as environment var, use .environment(orders), env var will be available in any subview then
+            - declare @EnvirnmentObject wrapper to access it in any view, use @EnvironmentObject var orders: OrderModel
+            - must declare env object in previews to avoid crash using  .environmentObject(OrderModel()) modifier
+            - while using this parameter won't be required
+            
+            - variations on this are called EnvironmentValeus -> system values
+                    - .environment(\.colorScheme, .light) like .environment(<key name>, <value>) as modifier
+                    - @Environment(\.verticalSizeClass) var vSizeClass: UserInterfaceSizeClass? as var
+                    - In an app with a lot of views and only a few scattered places in the hierarchy need this model
+                
+                
+            
+            
     
     
     

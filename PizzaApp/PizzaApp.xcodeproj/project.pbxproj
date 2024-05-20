@@ -26,6 +26,7 @@
 		7AF59F732BFB4CBE0048DAEA /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F6F2BFB4CBD0048DAEA /* OrderModel.swift */; };
 		7AF59F742BFB4CBE0048DAEA /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F702BFB4CBD0048DAEA /* MenuModel.swift */; };
 		7AF59F752BFB4CBE0048DAEA /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F712BFB4CBE0048DAEA /* OrderItem.swift */; };
+		7AF59F772BFB791C0048DAEA /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF59F762BFB791C0048DAEA /* StatusBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		7AF59F6F2BFB4CBD0048DAEA /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		7AF59F702BFB4CBD0048DAEA /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		7AF59F712BFB4CBE0048DAEA /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		7AF59F762BFB791C0048DAEA /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				7AF59F662BF8C94F0048DAEA /* OrderRowView.swift */,
 				7AF59F682BF8C95E0048DAEA /* HeaderView.swift */,
 				7AF59F6A2BF8DFA00048DAEA /* RatingView.swift */,
+				7AF59F762BFB791C0048DAEA /* StatusBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				7AF59F672BF8C94F0048DAEA /* OrderRowView.swift in Sources */,
 				7AF59F632BF8C8DB0048DAEA /* MenuItemView.swift in Sources */,
 				7AF59F742BFB4CBE0048DAEA /* MenuModel.swift in Sources */,
+				7AF59F772BFB791C0048DAEA /* StatusBarView.swift in Sources */,
 				7AF59F692BF8C95E0048DAEA /* HeaderView.swift in Sources */,
 				7AF59F732BFB4CBE0048DAEA /* OrderModel.swift in Sources */,
 				7AF59F722BFB4CBE0048DAEA /* MenuItem.swift in Sources */,
