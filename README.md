@@ -225,8 +225,10 @@ SwiftUI
                 2. Should have unique views, so only have the view at one place
             - Use @NameSpace wrapper
             
-        
-        - 
+- Navigation :
+    1. Presenting a view
+    2. Alerts - Presenting view requires binding vars
+    3. 
             
             
     

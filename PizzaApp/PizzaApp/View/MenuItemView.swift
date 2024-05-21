@@ -11,6 +11,7 @@ struct MenuItemView: View {
     
     @State private var addedItem: Bool = false
     @Binding var item: MenuItem
+    @State private var presentAlert = false
     @ObservedObject var orders: OrderModel
 
     var body: some View {
@@ -47,8 +48,7 @@ struct MenuItemView: View {
                 }
             }
             Button {
-                addedItem.toggle()
-                orders.addOrder(item, quantity: 1)
+                presentAlert.toggle()
             } label: {
                 HStack {
                     Spacer()
@@ -62,6 +62,17 @@ struct MenuItemView: View {
             .background(Color(.red), in: Capsule())
             .padding(5)
             .shadow(radius: 10)
+            .alert("Buy this pizza", isPresented: $presentAlert) {
+                Button("No", role: .cancel) { }
+                Button("Yes") {
+                    addedItem.toggle()
+                    orders.addOrder(item, quantity: 1)
+                }
+                Button("Make it double") {
+                    addedItem.toggle()
+                    orders.addOrder(item, quantity: 2)
+                }
+            }
         }
     }
 }
