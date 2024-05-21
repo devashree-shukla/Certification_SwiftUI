@@ -188,7 +188,45 @@ SwiftUI
                     - @Environment(\.verticalSizeClass) var vSizeClass: UserInterfaceSizeClass? as var
                     - In an app with a lot of views and only a few scattered places in the hierarchy need this model
                 
-                
+- Chapter 6 :
+    - Controls :
+        - uses binding vars
+        
+        - Toggle : switch
+        
+        - Stepper
+        
+        - Picker : multiselection, various types, 
+            - 2 ways for passing data between pickers : both have pros & cons
+            - 1.  Dependancy injection method
+            - 2. 
+        
+        - Text : 
+            - TextField
+            - TextEditor
+        
+        - Lazy grids : Cell
+        
+        - Tap gestures
+            - .onTapGesture { ... }
+            - .onTapGesture(count: 2) { ... }
+            -  .onLongPressGesture { ... }
+            - Sequence matters here , more taps comes first
+        
+        - Animation : animation modifier
+            - .animation(.easeOut, value: favourites)
+            - withAnimation(.easeInOut) { ... }
+            - .animation(.easeOut(duration: 0.7), value: favourites)
+        
+        - Matched Geometry
+            - For moving one view to another view
+            - Rules :
+                1. Should have atleast one animation
+                2. Should have unique views, so only have the view at one place
+            - Use @NameSpace wrapper
+            
+        
+        - 
             
             
     

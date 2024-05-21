@@ -11,6 +11,7 @@ struct ContentView: View {
     var menu: [MenuItem]
     @StateObject var orders: OrderModel = OrderModel()
     @State private var showOrders = true
+    @State private var showGrids = true
     @State private var selectedItem: MenuItem = noMenuItem
     
     var body: some View {
@@ -18,14 +19,18 @@ struct ContentView: View {
             HeaderView()
                 .shadow(radius: 5)
                 .environment(\.colorScheme, .light)
-            StatusBarView(showOrders: $showOrders)
+            StatusBarView(showOrders: $showOrders, showGrids: $showGrids)
             if showOrders {
                 OrderView(orders: orders)
             } else {
                 MenuItemView(item: $selectedItem, orders: orders)
                     .padding(5)
                     .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 10))
-                MenuView(menu: menu, selectedItem: $selectedItem)
+                if showGrids {
+                    MenuGridView(menu: menu, selectedItem: $selectedItem)
+                } else {
+                    MenuView(menu: menu, selectedItem: $selectedItem)
+                }
             }
             Spacer()
         }
