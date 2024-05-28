@@ -13,6 +13,8 @@ struct MenuItemView: View {
     @Binding var item: MenuItem
     @State private var presentAlert = false
     @ObservedObject var orders: OrderModel
+    @State private var newOrder:Bool = true
+    @State private var order = noOrderItem
 
     var body: some View {
         VStack {
@@ -62,16 +64,21 @@ struct MenuItemView: View {
             .background(Color(.red), in: Capsule())
             .padding(5)
             .shadow(radius: 10)
-            .alert("Buy this pizza", isPresented: $presentAlert) {
-                Button("No", role: .cancel) { }
-                Button("Yes") {
-                    addedItem.toggle()
-                    orders.addOrder(item, quantity: 1)
-                }
-                Button("Make it double") {
-                    addedItem.toggle()
-                    orders.addOrder(item, quantity: 2)
-                }
+//            .alert("Buy this pizza", isPresented: $presentAlert) {
+//                Button("No", role: .cancel) { }
+//                Button("Yes") {
+//                    addedItem.toggle()
+//                    orders.addOrder(item, quantity: 1)
+//                }
+//                Button("Make it double") {
+//                    addedItem.toggle()
+//                    orders.addOrder(item, quantity: 2)
+//                }
+//            }
+            .sheet(isPresented: $presentAlert) {
+                addedItem = true
+            } content: {
+                OrderDetailView(orderItem: $order, presentSheet: $presentAlert, newOrder: $newOrder)
             }
         }
     }

@@ -232,6 +232,9 @@ SwiftUI
             
             
     
+- Integration 
+    - Use UIHostingController to add SwiftUI view to UIKit
+    - UIViewControllerRepresentable protocol to be used to add UIKit to SwiftUI 
     
     
     
